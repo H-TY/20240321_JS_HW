@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const TP = [
+            [18.2, 17.3, 15.0, 13.4],
+            [23.8, 25.1, 20.6, 17.8],
+            [20.6, 21.5, 18.4, 15.7]
+        ]
+
+        const week = {
+            name1: '星期一',
+            name2: '星期二',
+            name4: '星期三',
+            name5: '星期四'
+        }
+
+        const Time = {
+            name1: '時段一',
+            name2: '時段二',
+            name3: '時段三'
+        }
+        console.log(Object.values(week))
+        console.log(Object.values(Time))
+
+
+        document.write('第1小題：將陣列內容印出成表格<br>')
+
+        document.write('<table border="">')
+        for (let y of TP) {
+            document.write('<tr>')
+            for (let x = 0; x <= 3; x++) {
+                document.write(`<td>${Object.values(week)[x]}<br>${y[x]}</td>`)
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')
+
+
+
+
+
+        document.write('<hr>')
+
+        document.write('第2小題：每日的平均溫度<br>')
+
+
+
+
+
+        document.write('<hr>')
+
+        document.write('第3小題：時段一、時段二、時段三的平均氣溫<br>')
+
+
+
+
+
+
+        document.write('<hr>')
+
+        document.write('第4小題：溫度最高的日子與時段<br>')
+
+
+
+
+
+
+        document.write('<hr>')
+
+        document.write('第5小題：溫度最低的日子與時段<br>')
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

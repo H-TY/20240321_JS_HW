@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const week = {
+            name1: ' ',
+            name2: '星期一',
+            name3: '星期二',
+            name4: '星期三',
+            name5: '星期四'
+        }
+
+        const Time = {
+            nameA: '時段一',
+            nameB: '時段二',
+            nameC: '時段三'
+        }
+
+        const TP = [
+            [week.name1, week.name2, week.name3, week.name4, week.name5],
+            [Time.nameA, 18.2, 17.3, 15.0, 13.4],
+            [Time.nameB, 23.8, 25.1, 20.6, 17.8],
+            [Time.nameC, 20.6, 21.5, 18.4, 15.7]
+        ]
+
+
+        document.write('第1小題：將陣列內容印出成表格<br>')
+
+        document.write('<table border="" width="400px">')
+        for (let y of TP) {
+            document.write('<tr>')
+            for (let x = 0; x < Object.values(week).length; x++) {
+                document.write(`<td align="center">${y[x]}</td>`)
+            }
+            document.write('</tr>')
+        }
+        document.write('</table>')
+
+
+
+        document.write('<hr>')
+
+
+
+        document.write('第2小題：每日的平均溫度<br>')
+
+        let Mon = 0
+        let Tue = 0
+        let Wed = 0
+        let Thu = 0
+
+        for (let y = 1; y < Object.values(TP).length; y++) {
+            for (let x = 1; x < Object.values(week).length; x++) {
+                if (x <= 1) {
+                    (`${Mon += (TP[y][x] / Object.values(Time).length)}<br>`)
+                } else if (x <= 2) {
+                    (`${Tue += (TP[y][x] / Object.values(Time).length)}<br>`)
+                } else if (x <= 3) {
+                    (`${Wed += (TP[y][x] / Object.values(Time).length)}<br>`)
+                } else if (x <= 4) {
+                    (`${Thu += (TP[y][x] / Object.values(Time).length)}<br>`)
+                }
+            }
+        }
+        document.write(`
+            星期一的平均溫度 = ${Mon} °C<br>
+            星期二的平均溫度 = ${Tue} °C<br>
+            星期三的平均溫度 = ${Wed} °C<br>
+            星期四的平均溫度 = ${Thu} °C
+            `)
+
+
+
+        document.write('<hr>')
+
+
+
+        document.write('第3小題：時段一、時段二、時段三的平均氣溫<br>')
+
+        let T1 = 0
+        let T2 = 0
+        let T3 = 0
+
+        for (let y = 1; y < Object.values(TP).length; y++) {
+            for (let x = 1; x < Object.values(week).length; x++) {
+                if (y <= 1) {
+                    (`${T1 += (TP[y][x] / (Object.values(week).length - 1))}<br>`)
+                } else if (y <= 2) {
+                    (`${T2 += (TP[y][x] / (Object.values(week).length - 1))}<br>`)
+                } else if (y <= 3) {
+                    (`${T3 += (TP[y][x] / (Object.values(week).length - 1))}<br>`)
+                }
+            }
+        }
+        document.write(`
+            時段一的平均溫度 = ${T1} °C<br>
+            時段二的平均溫度 = ${T2} °C<br>
+            時段三的平均溫度 = ${T3} °C
+            `)
+
+
+
+        document.write('<hr>')
+
+
+
+        document.write('第4小題：溫度最高的日子與時段<br>')
+
+        let max = TP[0]
+
+        for (let i of TP) {
+            document.write(i + '<br>')
+            if (i > max) {
+                max = i
+            }
+        }
+        document.write(max)
+
+
+
+        document.write('<hr>')
+
+        document.write('第5小題：溫度最低的日子與時段<br>')
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

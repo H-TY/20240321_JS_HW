@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const S1=0
+        const S2=0
+        const S3=0
+
+        const data = [
+            [33, 32, 56, 45, 33],
+            [77, 33, 68, 45, 23],
+            [43, 55, 43, 67, 65]
+        ]
+
+        const P = {
+            A:12, 
+            B:16,
+            C:10,
+            D:14,
+            E:15
+        }
+
+        console.log(Object.values(P))
+
+        for(let i = 0; i < data.length; i++){
+            for(let j = 0; j < 5; j++ ){
+                document.write (`${(data[i][j])*(Object.values(P)[j])}<br>`)
+                console.log(`${(data[i][j])*(Object.values(P)[j])}`)
+                document.write ('<hr>')
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

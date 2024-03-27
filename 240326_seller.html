@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        document.write('第1小題：每一個銷售員的銷售總金額<br>')
+
+        const data = [
+            [33, 32, 56, 45, 33],
+            [77, 33, 68, 45, 23],
+            [43, 55, 43, 67, 65]
+        ]
+
+        const P = {
+            A: 12,
+            B: 16,
+            C: 10,
+            D: 14,
+            E: 15
+        }
+
+        let S1 = 0
+        let S2 = 0
+        let S3 = 0
+
+        console.log(Object.values(P))
+
+        for (let x in data) {
+            for (let j = 0; j < 5; j++) {
+                if (x <= 0) {
+                    console.log(`${S1 += ((data[x][j]) * (Object.values(P)[j]))}<br>`)
+                } else if (x <= 1) {
+                    console.log(`${S2 += ((data[x][j]) * (Object.values(P)[j]))}<br>`)
+                } else if (x <= 2) {
+                    console.log(`${S3 += ((data[x][j]) * (Object.values(P)[j]))}<br>`)
+                }
+            }
+        }
+        document.write(`銷售員1 銷售總金額：${S1}元<br>銷售員2 銷售總金額：${S2}元<br>銷售員3 銷售總金額：${S3}元<br>`)
+
+
+
+        document.write('<hr>')
+
+
+        document.write('第2小題：每一項產品的銷售總金額<br>')
+
+        let A = 0
+        let B = 0
+        let C = 0
+        let D = 0
+        let E = 0
+
+        for (let y in Object.values(P)) {
+            console.log(y)
+        }
+
+        for (let y in Object.values(P)) {
+            for (let q = 0; q < 3; q++) {
+                if (y <= 0) {
+                    console.log(`${A += ((data[q][y]) * (Object.values(P)[y]))}<br>`)
+                } else if (y <= 1) {
+                    console.log(`${B += ((data[q][y]) * (Object.values(P)[y]))}<br>`)
+                } else if (y <= 2) {
+                    console.log(`${C += ((data[q][y]) * (Object.values(P)[y]))}<br>`)
+                } else if (y <= 3) {
+                    console.log(`${D += ((data[q][y]) * (Object.values(P)[y]))}<br>`)
+                } else if (y <= 4) {
+                    console.log(`${E += ((data[q][y]) * (Object.values(P)[y]))}<br>`)
+                }
+            }
+        }
+        document.write(`A產品 銷售總金額：${A}元<br>B產品 銷售總金額：${B}元<br>C產品 銷售總金額：${C}元<br>D產品 銷售總金額：${D}元<br>E產品 銷售總金額：${E}元<br>`)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let S1=0
+        let S2=0
+        let S3=0
+
+        const data = [
+            [33, 32, 56, 45, 33],
+            [77, 33, 68, 45, 23],
+            [43, 55, 43, 67, 65]
+        ]
+
+        const P = {
+            A:12, 
+            B:16,
+            C:10,
+            D:14,
+            E:15
+        }
+
+        console.log(Object.values(P))
+
+        for (let x in data){
+            for(let j = 0; j < 5; j++ ){
+                if(x<=0){
+                    console.log (`${S1+=((data[x][j])*(Object.values(P)[j]))}<br>`)
+                } else if(x<=1){
+                    console.log (`${S2+=((data[x][j])*(Object.values(P)[j]))}<br>`)
+                } else if(x<=2){
+                    console.log (`${S3+=((data[x][j])*(Object.values(P)[j]))}<br>`)
+                }
+            }
+        }
+        document.write (`銷售員1 銷售總金額：${S1}<br>銷售員2 銷售總金額：${S2}<br>銷售員3 銷售總金額：${S3}<br>`)
+
+    </script>
+
+</body>
+
+</html>
